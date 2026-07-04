@@ -53,6 +53,9 @@ def merge_dataframes(subdirectories, relevant_columns):
         columns={'id': 'comment_id', 'conversation_id': 'cdc_post_id'}
     )
 
+    # only keep rows where lang column = en
+    merged_df = merged_df[merged_df['lang'] == 'en']
+
     return merged_df
 
 if __name__ == "__main__":
