@@ -1,4 +1,4 @@
-,Unnamed: 0,cdc_post_id,created_at,comment_id,lang,text,period
+,row_id,cdc_post_id,created_at,comment_id,lang,text,period
 173,173,1.481333160218669e+18,Thu Jan 13 03:46:17 +0000 2022,1.4814726427501158e+18,en,@CDCgov simply being young is a safe and effective way at helping prevent severe disease and death.,period_3
 1022,1022,1.569355240100569e+18,Mon Sep 12 19:02:22 +0000 2022,1.5694010473488425e+18,en,"@CDCgov Is this a double blind peer reviewed study? I didn't think so.
 Also, you are correlating, not showing causation. Not at all.",period_3

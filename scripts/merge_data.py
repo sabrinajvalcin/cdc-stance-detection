@@ -71,4 +71,4 @@ if __name__ == "__main__":
 
     df = merge_dataframes(subdirectories, relevant_columns)
 
-    df.to_csv('./data/all_replies.csv', index=True)
+    df.to_csv('./data/all_replies.csv', index=True, index_label='row_id')
