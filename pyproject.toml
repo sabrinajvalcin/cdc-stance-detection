@@ -1,0 +1,24 @@
+[project]
+name = "code"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "scikit-learn>=1.9.0",
+    "torch>=2.12.1",
+    "transformers>=5.12.1",
+]
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+
+dependencies = [
+    "ipykernel>=7.3.0",
+    "jupyter>=1.1.1",
+    "numpy>=2.5.0",
+    "pandas>=3.0.3",
+]
