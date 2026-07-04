@@ -6,6 +6,6 @@ if __name__ == "__main__":
 
     unlabeled_replies, replies_to_label = train_test_split(df, test_size=0.2, random_state=42)
 
-    unlabeled_replies.to_csv('./data/unlabeled_replies.csv', index=True)
+    unlabeled_replies.to_csv('./data/unlabeled_replies.csv', index=False)
 
-    replies_to_label.to_csv('./data/replies_to_label.csv', index=True)
+    replies_to_label.to_csv('./data/replies_to_label.csv', index=False)
