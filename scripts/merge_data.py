@@ -47,6 +47,11 @@ def merge_dataframes(subdirectories, relevant_columns):
     """
     merged_df = pd.concat((generate_dataframe_from_subdirectory(subdirectory,relevant_columns) for subdirectory in subdirectories), ignore_index=True)
     merged_df = merged_df.drop_duplicates(subset='id')
+    
+    #rename 'id' column to comment_id and 'conversation_id to cdc_post_id
+    merged_df = merged_df.rename(
+        columns={'id': 'comment_id', 'conversation_id': 'cdc_post_id'}
+    )
 
     return merged_df
 
@@ -66,5 +71,4 @@ if __name__ == "__main__":
 
     df = merge_dataframes(subdirectories, relevant_columns)
 
-    df.to_csv('./data/all_replies.csv', index=False)
-    
+    df.to_csv('./data/all_replies.csv', index=True)
