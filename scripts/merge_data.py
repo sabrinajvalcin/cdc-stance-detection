@@ -47,7 +47,7 @@ def merge_dataframes(subdirectories, relevant_columns):
     """
     merged_df = pd.concat((generate_dataframe_from_subdirectory(subdirectory,relevant_columns) for subdirectory in subdirectories), ignore_index=True)
     merged_df = merged_df.drop_duplicates(subset='id')
-    
+
     return merged_df
 
 if __name__ == "__main__":
@@ -66,4 +66,5 @@ if __name__ == "__main__":
 
     df = merge_dataframes(subdirectories, relevant_columns)
 
-    df.to_csv('./data/merged_data_all_periods.csv', index=False)
+    df.to_csv('./data/all_replies.csv', index=False)
+    
