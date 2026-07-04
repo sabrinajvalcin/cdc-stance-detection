@@ -8,7 +8,7 @@ The objective of this project is to analyze how users responded to official CDC 
 
 ### Model Selection
 
-A review of recent NLP literature was conducted to identify an appropriate modeling approach for stance detection on Twitter. Prior research consistently shows that transformer-based models outperform traditional machine learning methods and earlier deep learning architectures on social media classification tasks. Because Twitter language is highly informal and COVID-19 introduced domain-specific terminology, **COVID-Twitter-BERT (CT-BERT)** was selected as the primary transformer model.
+A review of recent NLP literature was conducted to identify an appropriate modeling approach for stance detection on Twitter. Prior research consistently shows that transformer-based models outperform traditional machine learning methods and earlier deep learning architectures on social media classification tasks. Because Twitter language is highly informal and COVID-19 introduced domain-specific terminology, the **COVID-Twitter-BERT (CT-BERT)** was selected as the primary transformer model.
 
 ### Data Collection
 
@@ -18,7 +18,7 @@ Official CDC posts were collected using Twitter/X focused searches covering thre
 * **2021:** Vaccine rollout
 * **2022:** Transition toward endemic management
 
-For each period, searches targeted key public health topics (e.g., COVID, masks, vaccines, boosters, and Omicron) while restricting results to posts from the official CDC account (`@CDCgov`). Replies to the selected CDC posts were then collected using the **data-slayer/twitter-comments** actor on Spiffy.
+For each period, searches targeted key public health topics (e.g., COVID, masks, vaccines, stay at home, omicron) while restricting results to posts from the official CDC account (`@CDCgov`). Replies to the selected CDC posts were then collected using the **data-slayer/twitter-comments** actor on Apify.
 
 ### Data Annotation
 
@@ -34,7 +34,7 @@ The remaining unlabeled replies will be used for model inference after training.
 
 ### CT-BERT
 
-The primary model is **COVID-Twitter-BERT (CT-BERT)**, a transformer model pretrained on approximately 160 million COVID-19-related tweets. Its domain-specific pretraining enables it to better capture COVID-related terminology and Twitter-specific language patterns than general-purpose language models.
+The primary model is **COVID-Twitter-BERT (CT-BERT) v2**, a transformer model pretrained on approximately 97 million COVID-19-related tweets. Its domain-specific pretraining enables it to better capture COVID-related terminology and Twitter-specific language patterns than general-purpose language models.
 
 ### TF-IDF + Logistic Regression
 
