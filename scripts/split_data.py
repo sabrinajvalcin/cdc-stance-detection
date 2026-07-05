@@ -9,3 +9,6 @@ if __name__ == "__main__":
     unlabeled_replies.to_csv('./data/unlabeled_replies.csv', index=False)
 
     replies_to_label.to_csv('./data/replies_to_label.csv', index=False)
+
+    # create excel version for labeling
+    replies_to_label.to_excel('./data/replies_to_label.xlsx', index=False)
