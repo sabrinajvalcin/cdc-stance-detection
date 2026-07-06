@@ -44,7 +44,5 @@ The primary model is **COVID-Twitter-BERT (CT-BERT) v2**, a transformer model pr
 As a classical machine learning baseline, tweets will also be represented using **Term Frequency–Inverse Document Frequency (TF-IDF)** features and classified with **Logistic Regression**. This baseline provides a computationally efficient point of comparison against the transformer-based approach and helps quantify the performance gains achieved by CT-BERT.
 
 ## Preliminary Results:
-The TF-IDF Logistic Regression model performed reasonably on the majority class but struggled with the minority supportive class, reflecting the strong class imbalance in the annotated dataset. Although its overall accuracy was 0.63, the lower macro F1 score of 0.40 shows uneven performance across classes.
-
-The fine-tuned COVID-Twitter-BERT model improved performance , increasing accuracy from 0.63 to 0.72, weighted F1 from 0.58 to 0.70, and macro F1 from 0.40 to 0.55. However, the supportive class remained difficult because it had only 9 examples in the test set.
+Overall, the fine-tuned COVID-Twitter-BERT model consistently outperformed the TF-IDF Logistic Regression baseline, achieving higher accuracy (0.68 vs. 0.63), weighted F1 (0.66 vs. 0.58), and macro F1 (0.47 vs. 0.40). While the transformer produced more balanced performance across the majority classes, both models failed to recognize the *supportive* class because of its extremely limited representation in the training and test data. These findings suggest that increasing the quantity and diversity of labeled data, especially for the *supportive* class, may have a greater impact on performance of both models.
 
