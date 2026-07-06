@@ -10,4 +10,4 @@ wheels/
 .venv
 
 # notebooks for scratch work
-*.ipynb
+notebooks/
