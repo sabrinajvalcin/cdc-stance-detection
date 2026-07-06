@@ -1,3 +1,6 @@
+All experiments were conducted using Google Colab on the T4 GPU runtime.
+Check out the [Colab notebok](https://colab.research.google.com/drive/1ecO2WLZ0--NJWu6HryRBmwDl1KT68u_S?usp=sharing).
+
 # COVID-19 CDC Twitter Stance Detection
 
 ## Objective
@@ -44,3 +47,4 @@ As a classical machine learning baseline, tweets will also be represented using 
 The TF-IDF Logistic Regression model performed reasonably on the majority class but struggled with the minority supportive class, reflecting the strong class imbalance in the annotated dataset. Although its overall accuracy was 0.63, the lower macro F1 score of 0.40 shows uneven performance across classes.
 
 The fine-tuned COVID-Twitter-BERT model improved performance , increasing accuracy from 0.63 to 0.72, weighted F1 from 0.58 to 0.70, and macro F1 from 0.40 to 0.55. However, the supportive class remained difficult because it had only 9 examples in the test set.
+
